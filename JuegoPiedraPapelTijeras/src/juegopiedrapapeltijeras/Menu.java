@@ -17,13 +17,14 @@ import java.util.Scanner;
  */
 public class Menu {
     public static void main(String[] args) {
-        int eleccion;
+       /* int eleccion;
         Scanner sc = new Scanner(System.in);
         System.out.println("Elige una opción: \n"
                 + "\n0 = Piedra"
                 + "\n1 = Papel"
                 + "\n2 = Tijeras");
-        eleccion = sc.nextInt();
+        eleccion = sc.nextInt();*/
+        System.out.println("[+-]?\\d*(\\.\\d+)?");
     }
 
 }
