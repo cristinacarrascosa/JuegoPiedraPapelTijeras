@@ -20,7 +20,7 @@ public class JuegoPiedraPapelTijeras_Final {
         Scanner sc = new Scanner(System.in);
 
         // Variables y Arrays
-        String eleccionJugStr; // Para descartar que el jugador no introduzca un String
+        
         String[] jugadores; // Array que almacenará el nombre de los jugadores
         int[] puntuaciones; // Array que almacenará las puntuaciones
         int cuantosJugadores; // para crear el tamaño del array de los jugadores
@@ -31,7 +31,7 @@ public class JuegoPiedraPapelTijeras_Final {
         System.out.println("----------------------------");
         System.out.println("");
 
-        // Preguntamos cuantos van a ser para establecer el tamaño del Array jugadores
+        // Preguntamos cuantos van a ser para establecer el tamaño del Array jugadores y puntuaciones
         System.out.print("¿Cuántos jugadores se enfrentarán a la máquina?: ");
         cuantosJugadores = sc.nextInt();
         jugadores = new String[cuantosJugadores];
@@ -55,7 +55,7 @@ public class JuegoPiedraPapelTijeras_Final {
 
         // El jugador elije opción y nos aseguramos que esté en rango con la función pedirIntEnRango
         System.out.println("Empecemos!, Elija una opcion (1)Piedra, (2) Papel o (3) Tijeras.");
-        //eleccionJug = pedirIntEnRango(1, 3);
+        
 
 
 
@@ -77,8 +77,9 @@ public class JuegoPiedraPapelTijeras_Final {
 
       //Calculamos el ganador y en caso de empate, volvemos a jugar.
       int maxima = 0;
-      int ganador = -1;
+      int ganador = -1; // con el -1 no habrá ningún ganador hasta que no se ejecute el for, ya que no hay ningún jugador -1
       boolean empate = false;
+      // Este for va recorriendo el array puntuaciones i comparandolas, quedándose así con la puntuación mas elevada
       for (int i = 0; i < cuantosJugadores; i++) {
           if (puntuaciones[i] > maxima) {
             maxima = puntuaciones[i];
